@@ -93,7 +93,8 @@
     "TypeScript",
     "Eslint",
     "Storybook",
-    "Jest"
+    "Jest",
+    "Plop"
   ],
   "license": "MIT"
 }
