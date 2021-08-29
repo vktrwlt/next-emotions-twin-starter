@@ -1,0 +1,58 @@
+{
+  // Configuration for JavaScript files
+  "extends": ["eslint:recommended", "next", "plugin:prettier/recommended"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "semi": ["error", "always"]
+  },
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "next",
+        "next/core-web-vitals",
+        "prettier",
+        "plugin:prettier/recommended" // always at the end
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        // custom rules
+        "@typescript-eslint/no-unused-vars": ["off"], // re-enable for strict TS
+        "@typescript-eslint/explicit-module-boundary-types": ["off"] // re-enable for strict TS
+      }
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["_*.ts", "_*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": ["off"] // pages don't have returns
+      }
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["_document.tsx"],
+      "rules": {
+        "@typescript-eslint": ["off"] // pages don't have returns
+      }
+    },
+    {
+      // enable the rule specifically for TypeScript files
+      "files": ["*stories.tsx"],
+      "rules": {
+        "import/no-anonymous-default-export": ["off"] // pages don't have returns
+      }
+    }
+  ]
+}

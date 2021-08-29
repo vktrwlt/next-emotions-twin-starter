@@ -1,0 +1,26 @@
+import React from 'react';
+import { Story } from '@storybook/react/types-6-0';
+import { {{pascalCase name}}, {{pascalCase name}}Props } from '@components/{{pascalCase name}}/{{pascalCase name}}';
+
+export default {
+  title: '{{pascalCase name}}',
+  component: {{pascalCase name}},
+  argTypes: {
+    variant: {
+      description: 'The type of {{pascalCase name}}',
+    },
+    size: {
+      description: 'The size of {{pascalCase name}}',
+    },
+    children: {
+      description: 'The {{pascalCase name}} content',
+      defaultValue: '{{pascalCase name}}',
+      type: { name: 'text', required: true },
+    },
+  },
+};
+
+const Template: Story<{{pascalCase name}}Props> = (args) => <{{pascalCase name}} {...args} />;
+
+export const Default = Template.bind({});
+Default.args = { variant: 'primary', size: 'md' };
