@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  -webkit-transform: var(--tw-transform);
+  -moz-transform: var(--tw-transform);
+  -ms-transform: var(--tw-transform);
+  transform: var(--tw-transform);
+  font-weight: 600;
+  transition-duration: 75ms;
+  border-radius: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.emotion-0:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.emotion-0:hover,
+.emotion-0:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+}
+
+<button
+    class="emotion-0 emotion-1"
+  />
+</DocumentFragment>
+`;
