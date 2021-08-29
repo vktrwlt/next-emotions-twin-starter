@@ -1,8 +1,8 @@
-import { Input } from '@components/Input/Input';
+import { InputTwo } from '@components/InputTwo/InputTwo';
 import { render, fireEvent } from '@utils/test-utils';
 
-describe('<Input />', () => {
-  const { asFragment } = render(<Input />);
+describe('<InputTwo />', () => {
+  const { asFragment } = render(<InputTwo />);
   it('should render without crashing', () => {
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 import tw, { styled, css, theme, TwStyle } from 'twin.macro';
 
-export interface InputProps {
+export interface InputTwoProps {
   variant?: 'primary' | 'secondary';
   size?: 'xs' | 'sm' | 'md' | 'lg';
 }
@@ -18,8 +18,8 @@ const sizeVariants = {
   lg: tw` `,
 };
 
-export const Input = styled.div(
-  ({ variant = 'primary', size = 'md' }: InputProps) => [
+export const InputTwo = styled.div(
+  ({ variant = 'primary', size = 'md' }: InputTwoProps) => [
     // Base Styles
     tw` `,
 
