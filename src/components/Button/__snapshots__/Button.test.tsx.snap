@@ -33,6 +33,8 @@ exports[`<Button /> should render without crashing 1`] = `
 
 <button
     class="emotion-0 emotion-1"
-  />
+  >
+    Button
+  </button>
 </DocumentFragment>
 `;
