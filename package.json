@@ -85,5 +85,15 @@
       "preset": "emotion"
     }
   },
+  "keywords": [
+    "Next.js",
+    "Tailwind",
+    "Twin.macro",
+    "Emotions",
+    "TypeScript",
+    "Eslint",
+    "Storybook",
+    "Jest"
+  ],
   "license": "MIT"
 }
