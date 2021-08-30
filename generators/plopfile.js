@@ -7,28 +7,62 @@ module.exports = (plop) => {
         name: 'name',
         message: 'What is your component name?',
       },
-    ],
-    actions: [
       {
-        type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: 'templates/Component.ts.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/components/{{pascalCase name}}/index.ts',
-        templateFile: 'templates/ComponentIndex.ts.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
-        templateFile: 'templates/stories.ts.hbs',
-      },
-      {
-        type: 'add',
-        path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
-        templateFile: 'templates/test.ts.hbs',
+        type: 'list',
+        name: 'componentTemplate',
+        message: 'Component Template',
+        default: 'none',
+        choices: [
+          { name: 'Styled', value: 'styled' },
+          { name: 'With Variants', value: 'variants' },
+        ],
       },
     ],
+    actions: (data) => {
+      let actions = [
+        {
+          type: 'add',
+          path: '../src/components/{{pascalCase name}}/index.ts',
+          templateFile: 'templates/ComponentIndex.ts.hbs',
+        },
+        {
+          type: 'add',
+          path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx',
+          templateFile: 'templates/test.ts.hbs',
+        },
+      ];
+
+      if (data.componentTemplate === 'styled') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
+            templateFile: 'templates/Component.ts.hbs',
+          },
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+            templateFile: 'templates/stories.ts.hbs',
+          },
+        ]);
+      }
+      if (data.componentTemplate === 'variants') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
+            templateFile: 'templates/ComponentWithVariants.ts.hbs',
+          },
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+            templateFile: 'templates/storiesWithVariants.ts.hbs',
+          },
+        ]);
+      }
+
+      // Return the array of actions to take.
+      return actions;
+    },
   });
 };
