@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { AppProps } from 'next/app';
-import GlobalStyles from '@theme/GlobalStyles';
+import GlobalStyles from '@/theme/GlobalStyles';
 
 /**
  * Determines if we are running on server or in client.

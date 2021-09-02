@@ -1,8 +1,8 @@
-import { Button } from '@/components/Button';
+import { Header } from '@/components/Header/Header';
 import { render, fireEvent } from '@/utils/test-utils';
 
-describe('<Button />', () => {
-  const { asFragment } = render(<Button>Button</Button>);
+describe('<Header />', () => {
+  const { asFragment } = render(<Header />);
   it('should render without crashing', () => {
     expect(asFragment()).toMatchSnapshot();
   });

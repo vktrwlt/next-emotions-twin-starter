@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> should render without crashing 1`] = `
+<DocumentFragment>
+  .emotion-2 {
+  max-width: 1280px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      Footer
+    </div>
+  </div>
+</DocumentFragment>
+`;

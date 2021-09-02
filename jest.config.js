@@ -15,12 +15,12 @@ module.exports = {
   // add test-utils direct import
   moduleDirectories: ['node_modules', 'src', 'test'],
   moduleNameMapper: {
-    '^@components(.*)$': '<rootDir>/src/components$1',
-    '^@pages(.*)$': '<rootDir>/src/pages$1',
-    '^@templates(.*)$': '<rootDir>/src/templates$1',
-    '^@theme(.*)$': '<rootDir>/src/theme$1',
-    '^@utils(.*)$': '<rootDir>/src/utils$1',
-    '^@assets(.*)$': '<rootDir>/src/assets$1',
+    '^@/components(.*)$': '<rootDir>/src/components$1',
+    '^@/pages(.*)$': '<rootDir>/src/pages$1',
+    '^@/templates(.*)$': '<rootDir>/src/templates$1',
+    '^@/theme(.*)$': '<rootDir>/src/theme$1',
+    '^@/utils(.*)$': '<rootDir>/src/utils$1',
+    '^@/assets(.*)$': '<rootDir>/src/assets$1',
   },
   // add jest-dom and emotion's extra matchers
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],

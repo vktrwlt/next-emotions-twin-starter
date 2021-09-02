@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> should render without crashing 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.emotion-4 {
+  max-width: 1280px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emotion-6 {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  margin-top: 24px;
+}
+
+<div
+    class="emotion-0 emotion-1"
+  >
+    <div
+      class="emotion-2 emotion-3"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        Header
+      </div>
+    </div>
+    <div
+      class="emotion-6 emotion-7"
+    >
+      <main>
+        Hello
+      </main>
+    </div>
+    <div
+      class="emotion-2 emotion-9"
+    >
+      <div
+        class="emotion-4 emotion-5"
+      >
+        Footer
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,17 +1,17 @@
 import tw, { styled, css, theme } from 'twin.macro';
 
-export interface {{pascalCase name}}Props {
+export interface ContainerProps {
   children: React.ReactNode;
 }
 
 const Box = styled.div`
-  ${tw` `}
+  ${tw`max-w-screen-xl px-8 mx-auto `}
 `;
 
-const {{pascalCase name}} = (props: {{pascalCase name}}Props) => {
+const Container = (props: ContainerProps) => {
   const { children } = props;
 
   return <Box>{children}</Box>;
 };
 
-export { {{pascalCase name}} };
+export { Container };

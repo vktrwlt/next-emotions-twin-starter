@@ -1,11 +1,12 @@
-import { Button } from '@components/Button';
+import { Button } from '@/components/Button';
+import { Layout } from '@/components/Layout';
 import type { NextPage } from 'next';
-
+import { Container } from '@/components/Container';
 const Index: NextPage = () => {
   return (
-    <Button variant='solid' onClick={() => alert('hello')}>
-      Button
-    </Button>
+    <Layout>
+      <Container>Content</Container>
+    </Layout>
   );
 };
 
