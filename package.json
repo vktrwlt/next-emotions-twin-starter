@@ -17,7 +17,7 @@
     "test-ci": "jest --ci",
     "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix",
     "format": "prettier --write \"./**/*.{js,jsx}\"",
-    "generate": "npx plop --plopfile generators/plopfile.js",
+    "make": "npx plop --plopfile generators/plopfile.js",
     "prepare": "husky install"
   },
   "dependencies": {

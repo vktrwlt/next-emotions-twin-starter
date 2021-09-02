@@ -13,8 +13,9 @@ module.exports = (plop) => {
         message: 'Component Template',
         default: 'none',
         choices: [
-          { name: 'Styled', value: 'styled' },
+          { name: 'With Props', value: 'props' },
           { name: 'With Variants', value: 'variants' },
+          { name: 'No Props', value: 'styled' },
         ],
       },
     ],
@@ -57,6 +58,20 @@ module.exports = (plop) => {
             type: 'add',
             path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
             templateFile: 'templates/storiesWithVariants.ts.hbs',
+          },
+        ]);
+      }
+      if (data.componentTemplate === 'props') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
+            templateFile: 'templates/Component.ts.hbs',
+          },
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+            templateFile: 'templates/storiesWithProps.ts.hbs',
           },
         ]);
       }
