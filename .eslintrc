@@ -1,6 +1,12 @@
 {
   // Configuration for JavaScript files
-  "extends": ["eslint:recommended", "next", "plugin:prettier/recommended"],
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended" // always at the end
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -16,14 +22,7 @@
       "files": ["**/*.ts", "**/*.tsx"],
       "parser": "@typescript-eslint/parser",
       "plugins": ["@typescript-eslint"],
-      "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "next",
-        "next/core-web-vitals",
-        "prettier",
-        "plugin:prettier/recommended" // always at the end
-      ],
+      "extends": ["plugin:@typescript-eslint/recommended"],
       "parserOptions": {
         "project": "./tsconfig.json"
       },
@@ -49,7 +48,7 @@
     },
     {
       // enable the rule specifically for TypeScript files
-      "files": ["*stories.tsx"],
+      "files": ["*.stories.tsx"],
       "rules": {
         "import/no-anonymous-default-export": ["off"] // pages don't have returns
       }
