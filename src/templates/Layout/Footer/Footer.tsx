@@ -4,12 +4,10 @@ const Box = styled.div`
   ${tw``}
 `;
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <Box>
       <Container>Footer</Container>
     </Box>
   );
 };
-
-export { Footer };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '@/components/Footer/Footer';
+import { Footer } from '@/templates/Layout/Footer/Footer';
 
 export default {
   title: 'Footer',

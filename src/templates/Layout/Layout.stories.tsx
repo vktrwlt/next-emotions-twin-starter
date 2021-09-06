@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import { Layout, LayoutProps } from '@/components/Layout/Layout';
+import { Layout, LayoutProps } from '@/templates/Layout/Layout';
 
 export default {
   title: 'Layout',

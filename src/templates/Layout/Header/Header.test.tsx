@@ -1,8 +1,8 @@
-import { Footer } from '@/components/Footer/Footer';
+import { Header } from '@/templates/Layout/Header/Header';
 import { render, fireEvent } from '@/utils/test-utils';
 
-describe('<Footer />', () => {
-  const { asFragment } = render(<Footer />);
+describe('<Header />', () => {
+  const { asFragment } = render(<Header />);
   it('should render without crashing', () => {
     expect(asFragment()).toMatchSnapshot();
   });

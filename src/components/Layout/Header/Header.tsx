@@ -5,12 +5,10 @@ const Box = styled.div`
   ${tw``}
 `;
 
-const Header = () => {
+export const Header = () => {
   return (
     <Box>
       <Container>Header</Container>
     </Box>
   );
 };
-
-export { Header };

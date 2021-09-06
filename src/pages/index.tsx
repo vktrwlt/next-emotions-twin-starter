@@ -1,5 +1,5 @@
 import { Button } from '@/components/Button';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/templates/Layout';
 import type { NextPage } from 'next';
 import { Container } from '@/components/Container';
 const Index: NextPage = () => {

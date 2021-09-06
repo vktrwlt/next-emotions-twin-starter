@@ -1,5 +1,5 @@
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/templates/Layout/Header';
+import { Footer } from '@/templates/Layout/Footer';
 import tw, { styled, css, theme } from 'twin.macro';
 
 export interface LayoutProps {
@@ -13,7 +13,7 @@ const ContentWrapper = styled.div`
   ${tw`flex-auto w-full mt-md`}
 `;
 
-const Layout = (props: LayoutProps) => {
+export const Layout = (props: LayoutProps) => {
   const { children } = props;
 
   return (
@@ -26,5 +26,3 @@ const Layout = (props: LayoutProps) => {
     </Box>
   );
 };
-
-export { Layout };

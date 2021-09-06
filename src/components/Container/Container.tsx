@@ -8,10 +8,8 @@ const Box = styled.div`
   ${tw`max-w-screen-xl px-8 mx-auto `}
 `;
 
-const Container = (props: ContainerProps) => {
+export const Container = (props: ContainerProps) => {
   const { children } = props;
 
   return <Box>{children}</Box>;
 };
-
-export { Container };

@@ -1,8 +1,8 @@
-import { Layout } from '@/components/Layout/Layout';
+import { Footer } from '@/templates/Layout/Footer/Footer';
 import { render, fireEvent } from '@/utils/test-utils';
 
-describe('<Layout />', () => {
-  const { asFragment } = render(<Layout>Hello</Layout>);
+describe('<Footer />', () => {
+  const { asFragment } = render(<Footer />);
   it('should render without crashing', () => {
     expect(asFragment()).toMatchSnapshot();
   });
