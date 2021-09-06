@@ -1,8 +1,8 @@
-import { {{pascalCase name}} } from '@/components/{{pascalCase name}}/{{pascalCase name}}';
+import { {{pascalCase name}} } from '@/components/{{pascalCase name}}';
 import { render, fireEvent } from '@/utils/test-utils';
 
 describe('<{{pascalCase name}} />', () => {
-  const { asFragment } = render(<{{pascalCase name}} />);
+  const { asFragment } = render(<{{pascalCase name}}>{{pascalCase name}}</{{pascalCase name}}>);
   it('should render without crashing', () => {
     expect(asFragment()).toMatchSnapshot();
   });
