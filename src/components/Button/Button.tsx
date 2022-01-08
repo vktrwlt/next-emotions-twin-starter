@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import tw, { styled, css, theme, TwStyle } from 'twin.macro';
 
 export interface ButtonProps {
@@ -21,8 +22,8 @@ const sizeVariants = {
   lg: tw`py-4 text-xl px-7`,
 };
 
-export const Button = styled.button(
-  ({ variant = 'solid', size = 'md' }: ButtonProps) => [
+export const Button: FC<ButtonProps> = styled.button(
+  ({ variant = 'solid', size = 'md' }) => [
     // Base Styles
     tw`font-semibold duration-75 transform rounded focus:outline-none`,
 
