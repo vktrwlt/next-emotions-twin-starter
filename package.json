@@ -16,7 +16,7 @@
     "test:update": "npm test -- -u",
     "test:ci": "jest --ci",
     "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix",
-    "format": "prettier --write \"./**/*.{js,jsx}\"",
+    "format": "prettier --write \"./**/*.{js,ts,tsx}\"",
     "make": "npx plop --plopfile generators/plopfile.js",
     "prepare": "husky install"
   },
