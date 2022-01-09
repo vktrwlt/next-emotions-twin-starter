@@ -1,7 +1,15 @@
 import tw, { styled, css, theme, TwStyle } from 'twin.macro';
 
 export interface {{pascalCase name}}Props {
+  /**
+   * The visual style of the {{pascalCase name}}
+   * @default "primary"
+   */
   variant?: 'primary' | 'secondary';
+  /**
+   * The size of the Button {{pascalCase name}}
+   * @default "md"
+   */
   size?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
@@ -18,8 +26,7 @@ const sizeVariants = {
   lg: tw` `,
 };
 
-export const {{pascalCase name}} = styled.div(
-  ({ variant = 'primary', size = 'md' }: {{pascalCase name}}Props) => [
+export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = styled.div(({ variant, size }) => [
     // Base Styles
     tw` `,
 
@@ -28,3 +35,8 @@ export const {{pascalCase name}} = styled.div(
     sizeVariants[size],
   ]
 );
+
+{{pascalCase name}}.defaultProps = {
+  variant: 'primary',
+  size: 'md',
+};

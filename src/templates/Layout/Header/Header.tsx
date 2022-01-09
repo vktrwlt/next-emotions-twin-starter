@@ -1,14 +1,14 @@
 import { Container } from '@/components/Container';
 import tw, { styled, css, theme } from 'twin.macro';
 
-const Box = styled.div`
+const StyledHeader = styled.header`
   ${tw``}
 `;
 
 export const Header = () => {
   return (
-    <Box>
+    <StyledHeader>
       <Container>Header</Container>
-    </Box>
+    </StyledHeader>
   );
 };

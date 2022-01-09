@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '@/templates/Layout/Footer/Footer';
+import { Footer } from './Footer';
 
 export default {
   title: 'Footer',
@@ -9,4 +9,4 @@ export default {
 const Template = (args) => <Footer {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { children: 'footer' };

@@ -4,13 +4,13 @@ const toPath = (_path) => path.join(process.cwd(), _path);
 
 module.exports = {
   stories: [
-    '../src/components/**/*.stories.mdx',
-    '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
+    '../src/**/**/*.stories.mdx',
+    '../src/**/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
-    '@storybook/addon-controls',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-controls',
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',

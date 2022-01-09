@@ -1,9 +1,9 @@
-import { Header } from '@/templates/Layout/Header/Header';
+import { Header } from './Header';
 import { render, fireEvent } from '@/utils/test-utils';
 
 describe('<Header />', () => {
-  const { asFragment } = render(<Header />);
   it('should render without crashing', () => {
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<Header>Header</Header>);
+    expect(container).toBeInTheDocument();
   });
 });

@@ -2,8 +2,17 @@ import { FC } from 'react';
 import tw, { styled, css, theme, TwStyle } from 'twin.macro';
 
 export interface ButtonProps {
+  /**
+   * The visual style of the Button
+   * @default "solid"
+   */
   variant?: 'solid' | 'ghost' | 'outline' | 'link';
+  /**
+   * The size of the Button
+   * @default "md"
+   */
   size?: 'xs' | 'sm' | 'md' | 'lg';
+  children: React.ReactNode;
 }
 
 const primaryVariants = {
@@ -22,13 +31,16 @@ const sizeVariants = {
   lg: tw`py-4 text-xl px-7`,
 };
 
-export const Button: FC<ButtonProps> = styled.button(
-  ({ variant = 'solid', size = 'md' }) => [
-    // Base Styles
-    tw`font-semibold duration-75 transform rounded focus:outline-none`,
+export const Button: FC<ButtonProps> = styled.button(({ variant, size }) => [
+  // Base Styles
+  tw`font-semibold duration-75 transform rounded focus:outline-none`,
 
-    // Dynamic Styles
-    primaryVariants[variant],
-    sizeVariants[size],
-  ]
-);
+  // Dynamic Styles
+  primaryVariants[variant],
+  sizeVariants[size],
+]);
+
+Button.defaultProps = {
+  variant: 'solid',
+  size: 'md',
+};

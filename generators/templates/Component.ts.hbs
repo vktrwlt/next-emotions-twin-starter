@@ -1,15 +1,15 @@
+import { FC } from 'react';
 import tw, { styled, css, theme } from 'twin.macro';
 
 export interface {{pascalCase name}}Props {
   children: React.ReactNode;
 }
 
-const Box = styled.div`
+const Styled{{pascalCase name}} = styled.div`
   ${tw` `}
 `;
 
-export const {{pascalCase name}} = (props: {{pascalCase name}}Props) => {
-  const { children } = props;
+export const {{pascalCase name}}: FC<{{pascalCase name}}Props> = ({ children }) => {
 
-  return <Box>{children}</Box>;
+  return <Styled{{pascalCase name}}>{children}</Styled>;
 };

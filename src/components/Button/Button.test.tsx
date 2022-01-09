@@ -1,9 +1,9 @@
-import { Button } from '@/components/Button';
+import { Button } from './Button';
 import { render, fireEvent } from '@/utils/test-utils';
 
 describe('<Button />', () => {
-  const { asFragment } = render(<Button>Button</Button>);
   it('should render without crashing', () => {
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<Button>Button</Button>);
+    expect(container).toBeInTheDocument();
   });
 });

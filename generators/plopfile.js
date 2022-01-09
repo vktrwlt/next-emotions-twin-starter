@@ -13,9 +13,8 @@ module.exports = (plop) => {
         message: 'Component Template',
         default: 'none',
         choices: [
-          { name: 'With Props', value: 'props' },
+          { name: 'Default', value: 'props' },
           { name: 'With Variants', value: 'variants' },
-          { name: 'No Props', value: 'styled' },
         ],
       },
     ],
@@ -33,34 +32,6 @@ module.exports = (plop) => {
         },
       ];
 
-      if (data.componentTemplate === 'styled') {
-        actions = actions.concat([
-          {
-            type: 'add',
-            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
-            templateFile: 'templates/ComponentStyled.ts.hbs',
-          },
-          {
-            type: 'add',
-            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
-            templateFile: 'templates/stories.ts.hbs',
-          },
-        ]);
-      }
-      if (data.componentTemplate === 'variants') {
-        actions = actions.concat([
-          {
-            type: 'add',
-            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
-            templateFile: 'templates/ComponentWithVariants.ts.hbs',
-          },
-          {
-            type: 'add',
-            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
-            templateFile: 'templates/storiesWithVariants.ts.hbs',
-          },
-        ]);
-      }
       if (data.componentTemplate === 'props') {
         actions = actions.concat([
           {
@@ -72,6 +43,21 @@ module.exports = (plop) => {
             type: 'add',
             path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
             templateFile: 'templates/storiesWithProps.ts.hbs',
+          },
+        ]);
+      }
+
+      if (data.componentTemplate === 'variants') {
+        actions = actions.concat([
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.tsx',
+            templateFile: 'templates/ComponentWithVariants.ts.hbs',
+          },
+          {
+            type: 'add',
+            path: '../src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
+            templateFile: 'templates/storiesWithVariants.ts.hbs',
           },
         ]);
       }

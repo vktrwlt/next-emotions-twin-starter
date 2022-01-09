@@ -1,5 +1,4 @@
-import React from 'react';
-import { Header } from '@/templates/Layout/Header/Header';
+import { Header } from './Header';
 
 export default {
   title: 'Header',
@@ -9,4 +8,4 @@ export default {
 const Template = (args) => <Header {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = { children: 'header' };

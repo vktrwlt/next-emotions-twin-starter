@@ -1,9 +1,9 @@
-import { Footer } from '@/templates/Layout/Footer/Footer';
+import { Footer } from './Footer';
 import { render, fireEvent } from '@/utils/test-utils';
 
 describe('<Footer />', () => {
-  const { asFragment } = render(<Footer />);
   it('should render without crashing', () => {
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<Footer>Footer</Footer>);
+    expect(container).toBeInTheDocument();
   });
 });

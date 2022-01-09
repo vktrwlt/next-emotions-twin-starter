@@ -21,11 +21,12 @@
       "@/theme/*": ["src/theme/*"],
       "@/utils/*": ["src/utils/*"],
       "@/assets/*": ["src/assets/*"],
-      "@/hooks/*": ["hooks/*"],
+      "@/hooks/*": ["src/hooks/*"],
       "@/public/*": ["public/*"],
       "@/*": ["src/*"]
     },
-    "jsxImportSource": "@emotion/react" // twin.macro, for the css prop
+    "jsxImportSource": "@emotion/react", // twin.macro, for the css prop
+    "incremental": true
   },
   "exclude": ["node_modules", ".next", "out"],
   "include": [

@@ -1,13 +1,12 @@
-import React from 'react';
-import { Story } from '@storybook/react/types-6-0';
-import { Layout, LayoutProps } from '@/templates/Layout/Layout';
+import { Story, Meta } from '@storybook/react';
+import { Layout, LayoutProps } from './Layout';
 
 export default {
   title: 'Layout',
   component: Layout,
-};
+} as Meta;
 
 const Template: Story<LayoutProps> = (args) => <Layout {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { variant: 'primary', size: 'md' };
+Default.args = { children: 'Layout' };

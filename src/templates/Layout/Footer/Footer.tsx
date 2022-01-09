@@ -1,13 +1,14 @@
 import tw, { styled, css, theme } from 'twin.macro';
 import { Container } from '@/components/Container';
-const Box = styled.div`
+
+const StyledFooter = styled.footer`
   ${tw``}
 `;
 
 export const Footer = () => {
   return (
-    <Box>
+    <StyledFooter>
       <Container>Footer</Container>
-    </Box>
+    </StyledFooter>
   );
 };
